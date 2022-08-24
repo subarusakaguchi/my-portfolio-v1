@@ -2,9 +2,9 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   const meta = {
-    title: 'Meu CV Digital',
+    title: 'Subaru Sakaguchi',
     description: 'Site em forma de currículo do desenvolvedor Subaru Sakaguchi',
-    image: 'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png',
+    image: 'https://my-portfolio-v1.s3.amazonaws.com/coding-bg.jpg',
   }
 
   return (
