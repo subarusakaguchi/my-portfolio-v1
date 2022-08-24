@@ -5,6 +5,7 @@
   font-display: block;
   src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2');
 }
+
 @font-face {
   font-family: 'Inter var';
   font-style: italic;
@@ -12,6 +13,16 @@
   font-display: block;
   src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2');
   font-named-instance: 'Italic';
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
 }
 
 body {
@@ -25,6 +36,7 @@ body {
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
 }
+
 b,
 strong,
 h3,
@@ -33,11 +45,31 @@ h5,
 h6 {
   font-variation-settings: 'wght' 650;
 }
+
 h1 {
   font-variation-settings: 'wght' 850;
 }
+
 h2 {
   font-variation-settings: 'wght' 750;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+span {
+  font-size: 1rem;
+}
+
+a {
+  font-size: 1rem;
+  transition: filter 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  filter: brightness(0.7);
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
@@ -54,12 +86,4 @@ details summary {
 
 img.next-image {
   margin: 0;
-}
-
-.prose a {
-  color: #0074de;
-}
-
-.nav-line .nav-link {
-  color: #69778c;
 }
