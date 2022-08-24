@@ -1,10 +1,10 @@
-const YEAR = new Date().getFullYear()
+const YEAR = 2022
 
 export default {
   footer: (
     <footer>
       <small>
-        <time>{YEAR}</time> © Your Name.
+        <time>{YEAR}</time> © Subaru Sakaguchi
         <a href="/feed.xml">RSS</a>
       </small>
       <style jsx>{`
