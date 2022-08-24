@@ -4,15 +4,11 @@ export default {
   footer: (
     <footer>
       <small>
-        <time>{YEAR}</time> © Subaru Sakaguchi
-        <a href="/feed.xml">RSS</a>
+        <a href="https://github.com/subarusakaguchi"><time>{YEAR}</time>© Subaru Sakaguchi</a>
       </small>
       <style jsx>{`
         footer {
-          margin-top: 8rem;
-        }
-        a {
-          float: right;
+          margin-top: 4rem;
         }
       `}</style>
     </footer>

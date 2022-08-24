@@ -1,31 +1,36 @@
 ---
 type: page
-title: Photos
+title: Portfólio
 date: 2021-03-18
 ---
 
 # Photos
 
-Here's some of my photography.
+---
+Meus projetos favoritos
 
 import Image from 'next/image'
+import todoImage from '../public/images/Todo-fullstack.png'
 
-<Image
-  src="/images/photo2.jpg"
-  alt="Photo"
-  width={1125}
-  height={750}
-  priority
-  className="next-image"
-/>
-[Unsplash ↗ ](https://unsplash.com/photos/WeYamle9fDM)
+<div>
+  <h2>Desafio técnico para desenvolver uma API de controle de renda e gastos</h2>
+  <p>Utilizei conceitos de TDD para desenvolver a aplicação, como Testes unitários e Testes de integração, além disso fiz uso de um ORM (TypeOrm) para facilitar o controle do banco de dados (Postgres) e de técnicas de injeção de dependência para não acumular instancias dos serviços</p>
+</div>
+[Github ↗ ](https://github.com/subarusakaguchi/node.js-challenge-kinvo/tree/Subaru-kinvo-api)
 
-<Image
-  src="/images/photo.jpg"
-  alt="Photo"
-  width={1125}
-  height={750}
-  priority
-  className="next-image"
-/>
-[Unsplash ↗ ](https://unsplash.com/photos/ndN00KmbJ1c)
+<div>
+  <h2>Desafio técnico de uma aplicação Fullstack</h2>
+  <Image src={todoImage.src} width={1100} height={460} alt="Todo-fullstack image"/>
+  <p>Aplicação de lista de tarefas com sistema de contas e autenticação usando JWT para separar os Tarefas de cada usuário, foi utilizado React.js com Styled Components para o front e Node.js com MongoDB para o back e banco de dados</p>
+</div>
+[Github ↗ ](https://github.com/subarusakaguchi/todo-fullstack)
+
+<div>
+  <h2>integração Prisma com Nest.js</h2>
+  <p align="center">
+    <img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" />
+  </p>
+  <p>Projeto no qual construí uma API de posts gerados por usuários, o mesmo foi feito com Nest e integrado com uma banco de dados em Postgres por meio do Prisma, por fim foi utilizado Crypt API do próprio Node para geração de Hashs e UUID, um sistema compacto, simples e poderoso</p>
+</div>
+[Github ↗ ](https://github.com/subarusakaguchi/nest-prisma-integration)
+
