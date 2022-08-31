@@ -4,7 +4,7 @@ export default function Document() {
   const meta = {
     title: 'Subaru Sakaguchi',
     description: 'Site em forma de currículo do desenvolvedor Subaru Sakaguchi',
-    image: 'https://my-portfolio-v1.s3.amazonaws.com/coding-bg.jpg',
+    image: 'https://my-portfolio-v1.s3.amazonaws.com/coding.jpg',
   }
 
   return (
