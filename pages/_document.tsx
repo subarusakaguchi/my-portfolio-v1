@@ -1,4 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+
 
 export default function Document() {
   const meta = {
@@ -6,6 +9,19 @@ export default function Document() {
     description: 'Site em forma de currículo do desenvolvedor Subaru Sakaguchi',
     image: 'https://my-portfolio-v1.s3.amazonaws.com/coding.jpg',
   }
+
+  const router = useRouter()
+
+  useEffect(() => {
+    import('react-facebook-pixel').then(res => res.default).then((ReactPixel) => {
+      ReactPixel.init('488528279464370')
+      ReactPixel.pageView()
+
+      router.events.on('routeChangeComplete', () => {
+        ReactPixel.pageView()
+      })
+    })
+  }), [router.events]
 
   return (
     <Html lang="pt-br">
