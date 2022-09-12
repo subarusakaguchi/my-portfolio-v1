@@ -2,8 +2,23 @@ import 'nextra-theme-blog/style.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import '../styles/main.css'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+
+  useEffect(() => {
+    import('react-facebook-pixel').then(res => res.default).then((ReactPixel) => {
+      ReactPixel.init('488528279464370')
+      ReactPixel.pageView()
+
+      router.events.on('routeChangeComplete', () => {
+        ReactPixel.pageView()
+      })
+    })
+  }), [router.events]
+
   return (
     <>
       <Head>
@@ -20,6 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+
       </Head>
       <Component {...pageProps} />
     </>
